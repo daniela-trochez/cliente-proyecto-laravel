@@ -45,7 +45,7 @@ class ProyectoController extends Controller
     public function update(Request $request, Proyecto $proyecto)
     {
         $proyecto->update($request->all());
-        return redirect()->route('proyectos.show');
+        return redirect()->route('proyectos.show',$proyecto);
     }
 
     public function destroy(Proyecto $proyecto)
